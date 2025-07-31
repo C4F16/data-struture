@@ -1,0 +1,54 @@
+#include<iostream>
+#include<map>
+
+using namespace std;
+int main() {
+
+	map<string,int>studentgrads;
+	studentgrads["ALI"] = 74;
+	studentgrads["KLD"] = 55;
+	studentgrads["7MD"] = 99;
+
+	cout << "\nPrinting the map values\n";
+
+	for (const auto& pair : studentgrads) {
+		cout << "student : " << pair.first << ", grade:" << pair.second << endl;
+	}
+
+	cout << "\nFinding KLD's grad in the map \n";
+
+	string studentName = "KLD";
+
+	if (studentgrads.find(studentName) != studentgrads.end())
+	{
+		cout << studentName << "'s grade is " << studentgrads[studentName] << endl;
+	}
+	else 
+	{
+		cout << "grade not found fot" << studentName << endl;
+	}
+
+	cout << "\nFinding Mo's grad in the map \n";
+	studentName = "Mo";
+	
+
+	if (studentgrads.find(studentName) != studentgrads.end())
+	{
+		cout << studentName << "'s grade is " << studentgrads[studentName] << endl;
+	}
+	else
+	{
+		cout << "grade not found fot" << studentName << endl;
+	}
+	return 0;
+
+
+
+
+
+
+
+
+
+
+}
