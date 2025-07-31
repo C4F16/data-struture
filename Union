@@ -1,0 +1,29 @@
+#include<iostream>
+
+using namespace std;
+
+union MyUnion {
+	int intvalue;
+	float floatvalue;
+	char charvalue;
+
+};
+
+int main() {
+
+	MyUnion myUnion;
+	 
+	myUnion.intvalue = 10;
+	cout << "Integer value : " << myUnion.intvalue << endl;
+	
+	myUnion.floatvalue = 45.85;
+	cout << "float value : " << myUnion.floatvalue << endl;
+
+	myUnion.charvalue = 'M';
+	cout << "char value : " << myUnion.charvalue << endl;
+
+
+	
+	return 0;
+
+}
